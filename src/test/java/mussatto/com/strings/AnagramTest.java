@@ -12,6 +12,11 @@ public class AnagramTest {
     }
 
     @Test
+    public void isAnagram_withSpecial(){
+        assertEquals(true, Anagram.isAnagram("ABBB!!!BA", "AABBB!B"));
+    }
+
+    @Test
     public void notAnagram(){
         assertEquals(false, Anagram.isAnagram("ABBBBA", "AABBBBC"));
     }

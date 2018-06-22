@@ -10,8 +10,8 @@ public class Anagram {
         if(isNull(s1) || isNull(s2)){
             return false;
         }
-        Map<String, Integer> charMap1 = CharMap.getCharMap(s1);
-        Map<String, Integer> charMap2 = CharMap.getCharMap(s2);
+        Map<String, Integer> charMap1 = CharMap.getCharMap(SpecialCharRemover.removeSpecial(s1));
+        Map<String, Integer> charMap2 = CharMap.getCharMap(SpecialCharRemover.removeSpecial(s2));
 
         if(charMap1.keySet().size() != charMap2.keySet().size()){
             return false;
